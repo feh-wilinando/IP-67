@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5872834D1D05D3B7003699FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872834C1D05D3B7003699FD /* AppDelegate.swift */; };
+		5872834F1D05D3B7003699FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872834E1D05D3B7003699FD /* ViewController.swift */; };
+		587283521D05D3B7003699FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587283501D05D3B7003699FD /* Main.storyboard */; };
+		587283551D05D3B7003699FD /* ContatosApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 587283531D05D3B7003699FD /* ContatosApp.xcdatamodeld */; };
+		587283571D05D3B7003699FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587283561D05D3B7003699FD /* Assets.xcassets */; };
+		5872835A1D05D3B7003699FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587283581D05D3B7003699FD /* LaunchScreen.storyboard */; };
+		587283651D05D3B7003699FD /* ContatosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587283641D05D3B7003699FD /* ContatosAppTests.swift */; };
+		587283701D05D3B7003699FD /* ContatosAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872836F1D05D3B7003699FD /* ContatosAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		587283611D05D3B7003699FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 587283411D05D3B7003699FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 587283481D05D3B7003699FD;
+			remoteInfo = ContatosApp;
+		};
+		5872836C1D05D3B7003699FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 587283411D05D3B7003699FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 587283481D05D3B7003699FD;
+			remoteInfo = ContatosApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		587283491D05D3B7003699FD /* ContatosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5872834C1D05D3B7003699FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5872834E1D05D3B7003699FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		587283511D05D3B7003699FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		587283541D05D3B7003699FD /* ContatosApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosApp.xcdatamodel; sourceTree = "<group>"; };
+		587283561D05D3B7003699FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		587283591D05D3B7003699FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5872835B1D05D3B7003699FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		587283601D05D3B7003699FD /* ContatosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		587283641D05D3B7003699FD /* ContatosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosAppTests.swift; sourceTree = "<group>"; };
+		587283661D05D3B7003699FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5872836B1D05D3B7003699FD /* ContatosAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5872836F1D05D3B7003699FD /* ContatosAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosAppUITests.swift; sourceTree = "<group>"; };
+		587283711D05D3B7003699FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		587283461D05D3B7003699FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5872835D1D05D3B7003699FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587283681D05D3B7003699FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		587283401D05D3B7003699FD = {
+			isa = PBXGroup;
+			children = (
+				5872834B1D05D3B7003699FD /* ContatosApp */,
+				587283631D05D3B7003699FD /* ContatosAppTests */,
+				5872836E1D05D3B7003699FD /* ContatosAppUITests */,
+				5872834A1D05D3B7003699FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5872834A1D05D3B7003699FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				587283491D05D3B7003699FD /* ContatosApp.app */,
+				587283601D05D3B7003699FD /* ContatosAppTests.xctest */,
+				5872836B1D05D3B7003699FD /* ContatosAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5872834B1D05D3B7003699FD /* ContatosApp */ = {
+			isa = PBXGroup;
+			children = (
+				5872834C1D05D3B7003699FD /* AppDelegate.swift */,
+				5872834E1D05D3B7003699FD /* ViewController.swift */,
+				587283501D05D3B7003699FD /* Main.storyboard */,
+				587283561D05D3B7003699FD /* Assets.xcassets */,
+				587283581D05D3B7003699FD /* LaunchScreen.storyboard */,
+				5872835B1D05D3B7003699FD /* Info.plist */,
+				587283531D05D3B7003699FD /* ContatosApp.xcdatamodeld */,
+			);
+			path = ContatosApp;
+			sourceTree = "<group>";
+		};
+		587283631D05D3B7003699FD /* ContatosAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				587283641D05D3B7003699FD /* ContatosAppTests.swift */,
+				587283661D05D3B7003699FD /* Info.plist */,
+			);
+			path = ContatosAppTests;
+			sourceTree = "<group>";
+		};
+		5872836E1D05D3B7003699FD /* ContatosAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5872836F1D05D3B7003699FD /* ContatosAppUITests.swift */,
+				587283711D05D3B7003699FD /* Info.plist */,
+			);
+			path = ContatosAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		587283481D05D3B7003699FD /* ContatosApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587283741D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosApp" */;
+			buildPhases = (
+				587283451D05D3B7003699FD /* Sources */,
+				587283461D05D3B7003699FD /* Frameworks */,
+				587283471D05D3B7003699FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContatosApp;
+			productName = ContatosApp;
+			productReference = 587283491D05D3B7003699FD /* ContatosApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5872835F1D05D3B7003699FD /* ContatosAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587283771D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppTests" */;
+			buildPhases = (
+				5872835C1D05D3B7003699FD /* Sources */,
+				5872835D1D05D3B7003699FD /* Frameworks */,
+				5872835E1D05D3B7003699FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				587283621D05D3B7003699FD /* PBXTargetDependency */,
+			);
+			name = ContatosAppTests;
+			productName = ContatosAppTests;
+			productReference = 587283601D05D3B7003699FD /* ContatosAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5872836A1D05D3B7003699FD /* ContatosAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5872837A1D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppUITests" */;
+			buildPhases = (
+				587283671D05D3B7003699FD /* Sources */,
+				587283681D05D3B7003699FD /* Frameworks */,
+				587283691D05D3B7003699FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5872836D1D05D3B7003699FD /* PBXTargetDependency */,
+			);
+			name = ContatosAppUITests;
+			productName = ContatosAppUITests;
+			productReference = 5872836B1D05D3B7003699FD /* ContatosAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		587283411D05D3B7003699FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Fernando;
+				TargetAttributes = {
+					587283481D05D3B7003699FD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5872835F1D05D3B7003699FD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 587283481D05D3B7003699FD;
+					};
+					5872836A1D05D3B7003699FD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 587283481D05D3B7003699FD;
+					};
+				};
+			};
+			buildConfigurationList = 587283441D05D3B7003699FD /* Build configuration list for PBXProject "ContatosApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 587283401D05D3B7003699FD;
+			productRefGroup = 5872834A1D05D3B7003699FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				587283481D05D3B7003699FD /* ContatosApp */,
+				5872835F1D05D3B7003699FD /* ContatosAppTests */,
+				5872836A1D05D3B7003699FD /* ContatosAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		587283471D05D3B7003699FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5872835A1D05D3B7003699FD /* LaunchScreen.storyboard in Resources */,
+				587283571D05D3B7003699FD /* Assets.xcassets in Resources */,
+				587283521D05D3B7003699FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5872835E1D05D3B7003699FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587283691D05D3B7003699FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		587283451D05D3B7003699FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5872834F1D05D3B7003699FD /* ViewController.swift in Sources */,
+				5872834D1D05D3B7003699FD /* AppDelegate.swift in Sources */,
+				587283551D05D3B7003699FD /* ContatosApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5872835C1D05D3B7003699FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587283651D05D3B7003699FD /* ContatosAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587283671D05D3B7003699FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587283701D05D3B7003699FD /* ContatosAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		587283621D05D3B7003699FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 587283481D05D3B7003699FD /* ContatosApp */;
+			targetProxy = 587283611D05D3B7003699FD /* PBXContainerItemProxy */;
+		};
+		5872836D1D05D3B7003699FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 587283481D05D3B7003699FD /* ContatosApp */;
+			targetProxy = 5872836C1D05D3B7003699FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		587283501D05D3B7003699FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				587283511D05D3B7003699FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		587283581D05D3B7003699FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				587283591D05D3B7003699FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		587283721D05D3B7003699FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		587283731D05D3B7003699FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		587283751D05D3B7003699FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContatosApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		587283761D05D3B7003699FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ContatosApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		587283781D05D3B7003699FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ContatosAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContatosApp.app/ContatosApp";
+			};
+			name = Debug;
+		};
+		587283791D05D3B7003699FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ContatosAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContatosApp.app/ContatosApp";
+			};
+			name = Release;
+		};
+		5872837B1D05D3B7003699FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ContatosAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ContatosApp;
+			};
+			name = Debug;
+		};
+		5872837C1D05D3B7003699FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ContatosAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ContatosApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		587283441D05D3B7003699FD /* Build configuration list for PBXProject "ContatosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587283721D05D3B7003699FD /* Debug */,
+				587283731D05D3B7003699FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		587283741D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587283751D05D3B7003699FD /* Debug */,
+				587283761D05D3B7003699FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		587283771D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587283781D05D3B7003699FD /* Debug */,
+				587283791D05D3B7003699FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5872837A1D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5872837B1D05D3B7003699FD /* Debug */,
+				5872837C1D05D3B7003699FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		587283531D05D3B7003699FD /* ContatosApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				587283541D05D3B7003699FD /* ContatosApp.xcdatamodel */,
+			);
+			currentVersion = 587283541D05D3B7003699FD /* ContatosApp.xcdatamodel */;
+			path = ContatosApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 587283411D05D3B7003699FD /* Project object */;
+}
