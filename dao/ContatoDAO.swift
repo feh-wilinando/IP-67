@@ -27,4 +27,11 @@ class ContatoDAO: NSObject {
         self.contatos.append(contato)
     }
     
+    func list() -> Array<Contato> {
+        return self.contatos
+    }
+    
+    func findById(id: Int) -> Contato{
+        return self.contatos[id]
+    }
 }
