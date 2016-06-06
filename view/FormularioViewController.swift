@@ -11,6 +11,12 @@ import UIKit
 class FormularioViewController: UIViewController {
 
     
+    @IBOutlet weak var nomeTextField: UITextField!
+    @IBOutlet weak var telefoneTextField: UITextField!
+    @IBOutlet weak var enderecoTextiField: UITextField!
+    @IBOutlet weak var siteTextField: UITextField!
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

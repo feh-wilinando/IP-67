@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Formulario View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FormularioViewController" customModule="ContatosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -71,9 +71,14 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="endereco" destination="hZm-5W-f4V" id="nGW-v4-bz9"/>
+                        <outlet property="enderecoTextField" destination="xrV-ft-JaT" id="r8A-kn-WQO"/>
+                        <outlet property="enderecoTextiField" destination="hZm-5W-f4V" id="Afr-ai-g1c"/>
                         <outlet property="nome" destination="xug-BT-brT" id="tEl-nJ-PmE"/>
+                        <outlet property="nomeTextField" destination="xug-BT-brT" id="6Je-bV-Fxb"/>
                         <outlet property="site" destination="0kg-7M-vOP" id="jfP-xb-cya"/>
+                        <outlet property="siteTextField" destination="0kg-7M-vOP" id="I4o-zB-RI8"/>
                         <outlet property="telefone" destination="xrV-ft-JaT" id="8DK-24-Y6C"/>
+                        <outlet property="telefoneTextField" destination="xrV-ft-JaT" id="LgQ-cg-4wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
