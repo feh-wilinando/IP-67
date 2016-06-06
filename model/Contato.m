@@ -10,7 +10,7 @@
 
 @implementation Contato
 
-+(instancetype)novoContatoComNome:(NSString *)nome Telefone:(NSString *)telefone Endereco:(NSString *)endereco eSite:(NSString *)site{
+-(instancetype)initWithNome:(NSString *)nome telefone:(NSString *)telefone endereco:(NSString *)endereco site:(NSString *)site{
     
     
     Contato *contato = [Contato new];
@@ -21,6 +21,14 @@
     contato.site = site;
     
     return contato;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"[%@, %@, %@, %@]",  self.nome,
+                                                            self.telefone,
+                                                            self.endereco,
+                                                            self.site];
 }
 
 @end

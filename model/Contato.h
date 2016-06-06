@@ -15,9 +15,10 @@
 @property (nonatomic, strong) NSString *endereco;
 @property (nonatomic, strong) NSString *site;
 
-+(instancetype)novoContatoComNome: (NSString*) nome
-                         Telefone:(NSString*)  telefone
-                         Endereco:(NSString*)  endereco
-                            eSite:(NSString*)  site;
+-(instancetype)initWithNome: (NSString*) nome
+                         telefone:(NSString*)  telefone
+                         endereco:(NSString*)  endereco
+                            site:(NSString*)  site;
+
 
 @end
