@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5872834D1D05D3B7003699FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872834C1D05D3B7003699FD /* AppDelegate.swift */; };
-		5872834F1D05D3B7003699FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872834E1D05D3B7003699FD /* ViewController.swift */; };
 		587283521D05D3B7003699FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587283501D05D3B7003699FD /* Main.storyboard */; };
 		587283551D05D3B7003699FD /* ContatosApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 587283531D05D3B7003699FD /* ContatosApp.xcdatamodeld */; };
 		587283571D05D3B7003699FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587283561D05D3B7003699FD /* Assets.xcassets */; };
 		5872835A1D05D3B7003699FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587283581D05D3B7003699FD /* LaunchScreen.storyboard */; };
 		587283651D05D3B7003699FD /* ContatosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587283641D05D3B7003699FD /* ContatosAppTests.swift */; };
 		587283701D05D3B7003699FD /* ContatosAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872836F1D05D3B7003699FD /* ContatosAppUITests.swift */; };
+		5872837E1D05D410003699FD /* FormularioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872837D1D05D410003699FD /* FormularioViewController.swift */; };
+		587283831D05D5B1003699FD /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 587283821D05D5B1003699FD /* Contato.m */; };
+		587283861D05D9BD003699FD /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587283851D05D9BD003699FD /* ContatoDAO.swift */; };
+		5872838C1D05DF23003699FD /* ListagemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872838B1D05DF23003699FD /* ListagemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		587283491D05D3B7003699FD /* ContatosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5872834C1D05D3B7003699FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5872834E1D05D3B7003699FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		587283511D05D3B7003699FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		587283541D05D3B7003699FD /* ContatosApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosApp.xcdatamodel; sourceTree = "<group>"; };
 		587283561D05D3B7003699FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		5872836B1D05D3B7003699FD /* ContatosAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5872836F1D05D3B7003699FD /* ContatosAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosAppUITests.swift; sourceTree = "<group>"; };
 		587283711D05D3B7003699FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5872837D1D05D410003699FD /* FormularioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormularioViewController.swift; path = ../view/FormularioViewController.swift; sourceTree = "<group>"; };
+		587283811D05D5B1003699FD /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contato.h; path = model/Contato.h; sourceTree = SOURCE_ROOT; };
+		587283821D05D5B1003699FD /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contato.m; path = model/Contato.m; sourceTree = SOURCE_ROOT; };
+		587283851D05D9BD003699FD /* ContatoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContatoDAO.swift; path = dao/ContatoDAO.swift; sourceTree = SOURCE_ROOT; };
+		587283871D05DB34003699FD /* Integration-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Integration-Bridging-Header.h"; path = "configuration/Integration-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		5872838B1D05DF23003699FD /* ListagemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListagemTableViewController.swift; path = view/ListagemTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +107,11 @@
 		5872834B1D05D3B7003699FD /* ContatosApp */ = {
 			isa = PBXGroup;
 			children = (
+				587283881D05DB42003699FD /* configuration */,
+				587283841D05D996003699FD /* dao */,
+				587283801D05D579003699FD /* model */,
+				5872837F1D05D447003699FD /* view */,
 				5872834C1D05D3B7003699FD /* AppDelegate.swift */,
-				5872834E1D05D3B7003699FD /* ViewController.swift */,
 				587283501D05D3B7003699FD /* Main.storyboard */,
 				587283561D05D3B7003699FD /* Assets.xcassets */,
 				587283581D05D3B7003699FD /* LaunchScreen.storyboard */,
@@ -126,6 +137,40 @@
 				587283711D05D3B7003699FD /* Info.plist */,
 			);
 			path = ContatosAppUITests;
+			sourceTree = "<group>";
+		};
+		5872837F1D05D447003699FD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5872837D1D05D410003699FD /* FormularioViewController.swift */,
+				5872838B1D05DF23003699FD /* ListagemTableViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		587283801D05D579003699FD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				587283811D05D5B1003699FD /* Contato.h */,
+				587283821D05D5B1003699FD /* Contato.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		587283841D05D996003699FD /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				587283851D05D9BD003699FD /* ContatoDAO.swift */,
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		587283881D05DB42003699FD /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				587283871D05DB34003699FD /* Integration-Bridging-Header.h */,
+			);
+			name = configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5872834F1D05D3B7003699FD /* ViewController.swift in Sources */,
+				587283831D05D5B1003699FD /* Contato.m in Sources */,
 				5872834D1D05D3B7003699FD /* AppDelegate.swift in Sources */,
+				587283861D05D9BD003699FD /* ContatoDAO.swift in Sources */,
 				587283551D05D3B7003699FD /* ContatosApp.xcdatamodeld in Sources */,
+				5872837E1D05D410003699FD /* FormularioViewController.swift in Sources */,
+				5872838C1D05DF23003699FD /* ListagemTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +451,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Nando/caelum/IP-67/ContatosApp/configuration/Integration-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,10 +465,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Nando/caelum/IP-67/ContatosApp/configuration/Integration-Bridging-Header.h";
 			};
 			name = Release;
 		};
