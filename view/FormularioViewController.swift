@@ -16,6 +16,7 @@ class FormularioViewController: UIViewController {
     @IBOutlet weak var enderecoTextiField: UITextField!
     @IBOutlet weak var siteTextField: UITextField!
         
+    let dao = ContatoDAO.sharedInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +29,18 @@ class FormularioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func gravar(sender: AnyObject) {
+        
+        let contato : Contato = Contato(nome: nomeTextField.text,
+                                        telefone: telefoneTextField.text,
+                                        endereco: enderecoTextiField.text,
+                                        site: siteTextField.text)
+        
+        print(contato)
+        
+        
+        dao.add(contato)
+        
+        
+    }
 }
