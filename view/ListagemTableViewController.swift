@@ -10,8 +10,12 @@ import UIKit
 
 class ListagemTableViewController: UITableViewController {
     
+    static private let cellIdendifier = "celulaContato"
+    static private let formContatoIdendifier = "Form-Contato"
+    
     
     let dao = ContatoDAO.sharedInstance()
+    var contatoSelecionado:Contato?
     
     
     override func viewDidLoad() {
@@ -33,7 +37,7 @@ class ListagemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("celulaContato", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(ListagemTableViewController.cellIdendifier, forIndexPath: indexPath)
         
         let contato = dao.findById(indexPath.row)
         
@@ -52,6 +56,22 @@ class ListagemTableViewController: UITableViewController {
         }
         
     }
+            
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.contatoSelecionado = dao.findById(indexPath.row)
+        exibeFormulario()
+    }
+    
+    
+    
+    private func exibeFormulario(){
+        let form: FormularioViewController  = (storyboard?.instantiateViewControllerWithIdentifier(ListagemTableViewController.formContatoIdendifier) as! FormularioViewController)
+        
+        form.contato = self.contatoSelecionado
+        
+        navigationController?.pushViewController(form, animated: true)
+        
+    }
     
 }
