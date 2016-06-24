@@ -34,4 +34,8 @@ class ContatoDAO: NSObject {
     func findById(id: Int) -> Contato{
         return self.contatos[id]
     }
+    
+    func remove(id: Int){
+        self.contatos.removeAtIndex(id)
+    }
 }
