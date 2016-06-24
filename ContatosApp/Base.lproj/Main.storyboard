@@ -91,6 +91,7 @@
                     <navigationItem key="navigationItem" title="Cadastro" id="L3F-j4-SqA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="addButton" destination="nNs-DF-5ol" id="4oC-F6-fad"/>
                         <outlet property="enderecoTextiField" destination="hZm-5W-f4V" id="eGq-yy-41l"/>
                         <outlet property="nomeTextField" destination="xug-BT-brT" id="P9v-vT-tlX"/>
                         <outlet property="siteTextField" destination="0kg-7M-vOP" id="RCW-mw-hsK"/>

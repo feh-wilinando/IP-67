@@ -15,6 +15,7 @@ class FormularioViewController: UIViewController {
     @IBOutlet weak var telefoneTextField: UITextField!
     @IBOutlet weak var enderecoTextiField: UITextField!
     @IBOutlet weak var siteTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
     
     var contato:Contato?
     let dao = ContatoDAO.sharedInstance()
@@ -22,21 +23,33 @@ class FormularioViewController: UIViewController {
     
     override func viewDidLoad() {
         colocaContatoNoFormulario()
+        
+        if contato != nil {
+            addButton.enabled = false
+            
+            let alterarButton = UIBarButtonItem(title: "Alterar", style: .Plain, target: self, action:#selector(FormularioViewController.atualizaContato))
+            
+            self.navigationItem.rightBarButtonItem = alterarButton
+            
+        }
+        
     }
 
     @IBAction func gravar(sender: AnyObject) {
-        pegaContatoDoFormulario()
-        dao.add(self.contato!)
-        navigationController?.popViewControllerAnimated(true)
+        adicionaContato()
     }
     
     
-    
     private func pegaContatoDoFormulario()  {
-        self.contato = Contato(nome: nomeTextField.text,
-                               telefone: telefoneTextField.text,
-                               endereco: enderecoTextiField.text,
-                               site: siteTextField.text)
+        
+        if contato == nil {
+            contato = Contato()
+        }
+        
+        self.contato?.nome = nomeTextField.text
+        self.contato?.telefone = telefoneTextField.text
+        self.contato?.endereco = enderecoTextiField.text
+        self.contato?.site = siteTextField.text
     }
     
     private func colocaContatoNoFormulario(){
@@ -46,5 +59,16 @@ class FormularioViewController: UIViewController {
         siteTextField.text = contato?.site
     }
     
+    func atualizaContato(){
+        pegaContatoDoFormulario()
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
+    func adicionaContato(){
+        pegaContatoDoFormulario()
+        dao.add(self.contato!)
+        navigationController?.popViewControllerAnimated(true)
+    }
     
 }
