@@ -11,12 +11,11 @@ import UIKit
 class ListagemTableViewController: UITableViewController {
     
     
-    var dao = ContatoDAO.sharedInstance()
+    let dao = ContatoDAO.sharedInstance()
     
-    override func viewDidLoad() {
-        print("viewDidLoad")
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
     }
-    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -29,10 +28,11 @@ class ListagemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("celulaContato", forIndexPath: indexPath)
         
-        cell.textLabel?.text = dao.findById(indexPath.row).nome
+        let contato = dao.findById(indexPath.row)
+        
+        cell.textLabel?.text = contato.nome
         
         return cell
         

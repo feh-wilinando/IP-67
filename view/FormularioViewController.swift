@@ -15,37 +15,25 @@ class FormularioViewController: UIViewController {
     @IBOutlet weak var telefoneTextField: UITextField!
     @IBOutlet weak var enderecoTextiField: UITextField!
     @IBOutlet weak var siteTextField: UITextField!
-        
+    
+    var contato = Contato()
     let dao = ContatoDAO.sharedInstance()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func gravar(sender: AnyObject) {
-        let contato : Contato = Contato(nome: nomeTextField.text,
-                                        telefone: telefoneTextField.text,
-                                        endereco: enderecoTextiField.text,
-                                        site: siteTextField.text)
-        
-        print(contato)
-        
-        
-        dao.add(contato)
-        
-        
-        navigationController?.popToRootViewControllerAnimated(true)
-        
-//        navigationController?.popViewControllerAnimated(true)
+        pegaContatoDoFormulario()
+        dao.add(self.contato)
+        navigationController?.popViewControllerAnimated(true)
     }
     
+    
+    
+    func pegaContatoDoFormulario()  {
+        self.contato = Contato(nome: nomeTextField.text,
+                               telefone: telefoneTextField.text,
+                               endereco: enderecoTextiField.text,
+                               site: siteTextField.text)
+    }
     
     
 }
