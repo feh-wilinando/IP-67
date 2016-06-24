@@ -30,13 +30,6 @@ class FormularioViewController: UIViewController {
     }
 
     @IBAction func gravar(sender: AnyObject) {
-        
-        print("método gravar IBAction")
-        
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         let contato : Contato = Contato(nome: nomeTextField.text,
                                         telefone: telefoneTextField.text,
                                         endereco: enderecoTextiField.text,
@@ -46,7 +39,13 @@ class FormularioViewController: UIViewController {
         
         
         dao.add(contato)
+        
+        
+        navigationController?.popToRootViewControllerAnimated(true)
+        
+//        navigationController?.popViewControllerAnimated(true)
     }
+    
     
     
 }

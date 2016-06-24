@@ -13,6 +13,11 @@ class ListagemTableViewController: UITableViewController {
     
     var dao = ContatoDAO.sharedInstance()
     
+    override func viewDidLoad() {
+        print("viewDidLoad")
+    }
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
