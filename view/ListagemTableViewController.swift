@@ -13,6 +13,11 @@ class ListagemTableViewController: UITableViewController {
     
     let dao = ContatoDAO.sharedInstance()
     
+    
+    override func viewDidLoad() {
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
     }
