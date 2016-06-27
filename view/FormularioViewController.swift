@@ -19,7 +19,7 @@ class FormularioViewController: UIViewController {
     
     var contato:Contato?
     let dao = ContatoDAO.sharedInstance()
-    
+    var delegate:FormularioContatoViewControllerDelegation?
     
     override func viewDidLoad() {
         colocaContatoNoFormulario()
@@ -61,6 +61,11 @@ class FormularioViewController: UIViewController {
     
     func atualizaContato(){
         pegaContatoDoFormulario()
+        
+        if delegate != nil {
+            delegate?.contatoAtualizado(contato!)
+        }
+        
         navigationController?.popViewControllerAnimated(true)
     }
     
@@ -68,6 +73,11 @@ class FormularioViewController: UIViewController {
     func adicionaContato(){
         pegaContatoDoFormulario()
         dao.add(self.contato!)
+        
+        if delegate != nil {
+            delegate?.contatoAdicionado(contato!)
+        }
+        
         navigationController?.popViewControllerAnimated(true)
     }
     
