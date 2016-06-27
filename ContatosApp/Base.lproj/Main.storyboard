@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VbX-A7-TFG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZXZ-VU-VNM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="0sP-c0-dan">
+            <objects>
+                <tabBarController id="ZXZ-VU-VNM" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5n7-dd-9FC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VbX-A7-TFG" kind="relationship" relationship="viewControllers" id="bih-Y0-xga"/>
+                        <segue destination="RxK-qz-HgE" kind="relationship" relationship="viewControllers" id="Npj-bq-zg8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6l-Oi-58G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1604" y="741"/>
+        </scene>
+        <!--Contatos-->
         <scene sceneID="TdA-mU-ZoZ">
             <objects>
                 <navigationController id="VbX-A7-TFG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" id="D7d-QR-qNP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MWt-bC-irY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -21,6 +41,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAe-rF-9JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-941" y="305"/>
+        </scene>
+        <!--Localização-->
+        <scene sceneID="PVt-fV-7nE">
+            <objects>
+                <viewController id="LFx-TV-gZU" customClass="MapaViewController" customModule="ContatosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mrs-f5-Keu"/>
+                        <viewControllerLayoutGuide type="bottom" id="zUn-hK-oMp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qnU-zQ-G0U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-he-Pdg">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Localização" id="4i5-ZD-Eui"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="mapView" destination="yXR-he-Pdg" id="zmJ-Cx-DLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gr3-bx-IFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="1152"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="tne-QT-ifu">
@@ -86,10 +134,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHH-cB-rJX">
-                                <rect key="frame" x="150" y="78" width="115" height="115"/>
+                                <rect key="frame" x="157" y="147" width="100" height="46"/>
                                 <state key="normal" title="Foto"/>
                                 <connections>
-                                    <action selector="selecionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEn-x6-fyh"/>
+                                    <action selector="selecionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCq-d4-I5t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,7 +148,7 @@
                     <connections>
                         <outlet property="addButton" destination="nNs-DF-5ol" id="4oC-F6-fad"/>
                         <outlet property="enderecoTextiField" destination="hZm-5W-f4V" id="eGq-yy-41l"/>
-                        <outlet property="fotoButton" destination="WHH-cB-rJX" id="mV4-hI-YMH"/>
+                        <outlet property="fotoButton" destination="WHH-cB-rJX" id="8AP-mO-o6d"/>
                         <outlet property="nomeTextField" destination="xug-BT-brT" id="P9v-vT-tlX"/>
                         <outlet property="siteTextField" destination="0kg-7M-vOP" id="RCW-mw-hsK"/>
                         <outlet property="telefoneTextField" destination="xrV-ft-JaT" id="s3S-Im-zcL"/>
@@ -155,5 +203,28 @@
             </objects>
             <point key="canvasLocation" x="-412" y="305"/>
         </scene>
+        <!--Mapa-->
+        <scene sceneID="0C3-YQ-CaU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RxK-qz-HgE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="GGp-7E-7D3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nrn-DY-uCE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LFx-TV-gZU" kind="relationship" relationship="rootViewController" id="2ti-pz-Cb8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74T-Ph-5bE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-941" y="1152"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="lista-contatos" width="30" height="30"/>
+        <image name="mapa-contatos" width="30" height="30"/>
+    </resources>
 </document>
