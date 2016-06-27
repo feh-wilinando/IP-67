@@ -38,4 +38,10 @@ class ContatoDAO: NSObject {
     func remove(id: Int){
         self.contatos.removeAtIndex(id)
     }
+    
+    
+    func getIdFrom(contato: Contato)->Int{
+        return self.contatos.indexOf(contato)!
+    }
+    
 }
