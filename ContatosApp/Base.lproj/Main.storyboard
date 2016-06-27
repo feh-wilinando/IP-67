@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHH-cB-rJX">
-                                <rect key="frame" x="157" y="147" width="100" height="46"/>
+                                <rect key="frame" x="147" y="72" width="121" height="121"/>
                                 <state key="normal" title="Foto"/>
                                 <connections>
                                     <action selector="selecionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCq-d4-I5t"/>
