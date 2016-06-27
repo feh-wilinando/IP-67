@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormularioViewController: UIViewController {
+class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate {
 
     
     @IBOutlet weak var nomeTextField: UITextField!
@@ -16,6 +16,7 @@ class FormularioViewController: UIViewController {
     @IBOutlet weak var enderecoTextiField: UITextField!
     @IBOutlet weak var siteTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var fotoButton: UIButton!
     
     var contato:Contato?
     let dao = ContatoDAO.sharedInstance()
@@ -39,6 +40,22 @@ class FormularioViewController: UIViewController {
         adicionaContato()
     }
     
+    @IBAction func selecionarFoto(sender: UIButton) {
+        
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            //Câmera disponível
+        }else{
+            let picker = UIImagePickerController()
+            picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            picker.allowsEditing = true
+            picker.delegate = self
+            self.presentViewController(picker, animated: true, completion: nil)
+            
+        }
+        
+        
+    }
     
     private func pegaContatoDoFormulario()  {
         
@@ -50,6 +67,9 @@ class FormularioViewController: UIViewController {
         self.contato?.telefone = telefoneTextField.text
         self.contato?.endereco = enderecoTextiField.text
         self.contato?.site = siteTextField.text
+        
+        self.contato?.foto = self.fotoButton.backgroundImageForState(.Normal)
+        
     }
     
     private func colocaContatoNoFormulario(){
@@ -57,6 +77,15 @@ class FormularioViewController: UIViewController {
         telefoneTextField.text = contato?.telefone
         enderecoTextiField.text = contato?.endereco
         siteTextField.text = contato?.site
+        
+        fotoButton.setBackgroundImage(contato?.foto, forState: .Normal)
+        
+        
+        if fotoButton.backgroundImageForState(.Normal) != nil {
+            fotoButton.setTitle(nil, forState: .Normal)
+        }
+        
+        
     }
     
     func atualizaContato(){
@@ -79,6 +108,18 @@ class FormularioViewController: UIViewController {
         }
         
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
+    //MARK: delegate -  UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let imagemSelecionada: UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        self.fotoButton.setBackgroundImage(imagemSelecionada, forState: UIControlState.Normal)
+        self.fotoButton.setTitle(nil, forState: UIControlState.Normal)
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 }
