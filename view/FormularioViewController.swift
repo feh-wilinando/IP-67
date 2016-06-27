@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate {
+class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate, UIActionSheetDelegate {
 
     
     @IBOutlet weak var nomeTextField: UITextField!
@@ -44,7 +44,10 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            //Câmera disponível
+            let sheet = UIActionSheet(title: "Escolha a foto do contato", delegate: self, cancelButtonTitle: "Cancelar", destructiveButtonTitle: nil, otherButtonTitles: "Tirar Foto", "Escolher da biblioteca")
+            
+            sheet.showInView(self.view)
+            
         }else{
             let picker = UIImagePickerController()
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
@@ -122,4 +125,24 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
+    
+    //MARK: delegate  - UIActionSheetDelegate
+    func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        switch buttonIndex {
+        case 1:
+            picker.sourceType = .Camera
+            break
+        case 2:
+            picker.sourceType = .PhotoLibrary
+            break
+        default:
+            break
+        }
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
 }
