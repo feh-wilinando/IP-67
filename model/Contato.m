@@ -31,4 +31,21 @@
                                                             self.site];
 }
 
+
+-(CLLocationCoordinate2D)coordinate{
+    
+    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+}
+
+
+-(NSString *)title{
+    return self.nome;
+}
+
+-(NSString *)subtitle{
+    return self.telefone;
+}
+
+
+
 @end

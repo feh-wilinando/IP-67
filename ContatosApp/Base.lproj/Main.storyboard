@@ -78,9 +78,14 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="TPKeyboardAvoidingScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="310" affinity="minY"/>
+                            <userLayoutGuide location="377" affinity="minY"/>
+                            <userLayoutGuide location="345" affinity="minY"/>
+                        </userGuides>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVV-Hh-VuP">
                                 <rect key="frame" x="14" y="205" width="100" height="21"/>
@@ -100,34 +105,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrV-ft-JaT">
-                                <rect key="frame" x="138" y="239" width="256" height="30"/>
+                                <rect key="frame" x="136" y="239" width="256" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-4i-raW">
-                                <rect key="frame" x="16" y="281" width="100" height="21"/>
+                                <rect key="frame" x="20" y="281" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZm-5W-f4V">
-                                <rect key="frame" x="138" y="277" width="256" height="30"/>
+                                <rect key="frame" x="136" y="277" width="256" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnj-oc-rtQ">
-                                <rect key="frame" x="16" y="319" width="100" height="21"/>
+                                <rect key="frame" x="20" y="390" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kg-7M-vOP">
-                                <rect key="frame" x="138" y="315" width="256" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-DF-5ol">
-                                <rect key="frame" x="192" y="353" width="30" height="30"/>
+                                <rect key="frame" x="192" y="461" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="gravar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCb-A9-UCo"/>
@@ -140,6 +140,43 @@
                                     <action selector="selecionarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCq-d4-I5t"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-da-3Cv">
+                                <rect key="frame" x="20" y="314" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-gB-M3n">
+                                <rect key="frame" x="20" y="351" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnG-3N-dGa">
+                                <rect key="frame" x="136" y="310" width="218" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74f-Am-fDi">
+                                <rect key="frame" x="136" y="348" width="218" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kg-7M-vOP">
+                                <rect key="frame" x="136" y="386" width="256" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBX-BP-Y9c">
+                                <rect key="frame" x="362" y="329" width="30" height="30"/>
+                                <state key="normal" title="Button" image="gps"/>
+                                <connections>
+                                    <action selector="buscaCoordenadas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ts8-HG-23y"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="duw-XH-oRt">
+                                <rect key="frame" x="367" y="334" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -149,6 +186,10 @@
                         <outlet property="addButton" destination="nNs-DF-5ol" id="4oC-F6-fad"/>
                         <outlet property="enderecoTextiField" destination="hZm-5W-f4V" id="eGq-yy-41l"/>
                         <outlet property="fotoButton" destination="WHH-cB-rJX" id="8AP-mO-o6d"/>
+                        <outlet property="gpsButton" destination="lBX-BP-Y9c" id="NNj-Qy-9lj"/>
+                        <outlet property="latitudeTextField" destination="HnG-3N-dGa" id="j6q-KR-vaR"/>
+                        <outlet property="load" destination="duw-XH-oRt" id="nfy-qc-STB"/>
+                        <outlet property="longitudeTextField" destination="74f-Am-fDi" id="Ekf-KN-cnx"/>
                         <outlet property="nomeTextField" destination="xug-BT-brT" id="P9v-vT-tlX"/>
                         <outlet property="siteTextField" destination="0kg-7M-vOP" id="RCW-mw-hsK"/>
                         <outlet property="telefoneTextField" destination="xrV-ft-JaT" id="s3S-Im-zcL"/>
@@ -224,6 +265,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gps" width="30" height="30"/>
         <image name="lista-contatos" width="30" height="30"/>
         <image name="mapa-contatos" width="30" height="30"/>
     </resources>

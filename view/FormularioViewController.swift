@@ -7,21 +7,30 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate, UIActionSheetDelegate {
 
-    
+    //MARK:IBOutlet
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var telefoneTextField: UITextField!
     @IBOutlet weak var enderecoTextiField: UITextField!
     @IBOutlet weak var siteTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var fotoButton: UIButton!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var load: UIActivityIndicatorView!
+    @IBOutlet weak var gpsButton: UIButton!
     
+    
+    //MARK:Members
     var contato:Contato?
     let dao = ContatoDAO.sharedInstance()
     var delegate:FormularioContatoViewControllerDelegation?
     
+    
+    //MARK:Override
     override func viewDidLoad() {
         colocaContatoNoFormulario()
         
@@ -35,6 +44,8 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         }
         
     }
+    
+    //MARK:IBActions
 
     @IBAction func gravar(sender: AnyObject) {
         adicionaContato()
@@ -60,6 +71,37 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
+    @IBAction func buscaCoordenadas(sender: UIButton) {
+        
+        let geoCoder = CLGeocoder()
+        
+        self.gpsButton.hidden = true
+        self.load.startAnimating()
+        
+        geoCoder.geocodeAddressString(self.enderecoTextiField.text!, completionHandler: { (placesMarks:[CLPlacemark]?, error:NSError?) in
+            
+            if error == nil {
+                
+                let resultado = placesMarks?[0]
+                let coordenadas = resultado?.location?.coordinate;
+                                
+                self.latitudeTextField.text = coordenadas?.latitude.description
+                self.longitudeTextField.text = coordenadas?.longitude.description
+            }else{
+                print(error)
+            }
+                
+            
+            
+            self.load.stopAnimating()
+            self.gpsButton.hidden = false
+        })
+        
+    }
+    
+    
+    //MARK: Methods
+    
     private func pegaContatoDoFormulario()  {
         
         if contato == nil {
@@ -73,14 +115,20 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
         self.contato?.foto = self.fotoButton.backgroundImageForState(.Normal)
         
+        self.contato?.latitude = castToDouble(self.latitudeTextField.text!)
+        self.contato?.longitude = castToDouble(self.longitudeTextField.text!)
+        
+        
+        
+        
     }
     
-    private func colocaContatoNoFormulario(){
-        nomeTextField.text = contato?.nome
-        telefoneTextField.text = contato?.telefone
-        enderecoTextiField.text = contato?.endereco
-        siteTextField.text = contato?.site
-        
+    
+    private func castToDouble(string: String) -> Double {
+        return (NSNumberFormatter().numberFromString(string)?.doubleValue)!
+    }
+    
+    private func colocaContatoNoFormulario(){                
         fotoButton.setBackgroundImage(contato?.foto, forState: .Normal)
         
         
@@ -88,6 +136,12 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
             fotoButton.setTitle(nil, forState: .Normal)
         }
         
+        nomeTextField.text = contato?.nome
+        telefoneTextField.text = contato?.telefone
+        enderecoTextiField.text = contato?.endereco
+        siteTextField.text = contato?.site
+        latitudeTextField.text = contato?.latitude.description
+        longitudeTextField.text = contato?.longitude.description
         
     }
     
@@ -114,7 +168,9 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
     }
     
     
-    //MARK: delegate -  UIImagePickerControllerDelegate
+    //MARK:Delegates
+    
+    //MARK:UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let imagemSelecionada: UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
@@ -126,7 +182,7 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
     }
     
     
-    //MARK: delegate  - UIActionSheetDelegate
+    //MARK:UIActionSheetDelegate
     func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
         let picker = UIImagePickerController()
         picker.delegate = self

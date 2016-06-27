@@ -2,17 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "mapa-contatos.png",
+      "filename" : "Default.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mapa-contatos@2x.png",
+      "filename" : "Default@2x.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {
