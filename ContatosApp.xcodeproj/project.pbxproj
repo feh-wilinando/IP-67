@@ -21,6 +21,9 @@
 		58C271F71D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F61D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift */; };
 		58C271FA1D1DE6660021EAFA /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */; };
 		58FCEA031D21A6EF00028ACE /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEA021D21A6EF00028ACE /* MapaViewController.swift */; };
+		5D6F0333A05BDD1FEA910FB7 /* Pods_ContatosAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C509697931CAA81BD5C602 /* Pods_ContatosAppTests.framework */; };
+		80284BC91C9FB886EC9C4BB4 /* Pods_ContatosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9139DA3EBCF532487405C10 /* Pods_ContatosApp.framework */; };
+		F43381A80E85AD1270F9C8FD /* Pods_ContatosAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831AA6620FC554031AF7C63C /* Pods_ContatosAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088091021607CF1A266F86E3 /* Pods-ContatosAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosAppTests/Pods-ContatosAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		18CD693DA211E2E5C070A903 /* Pods-ContatosAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosAppUITests/Pods-ContatosAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		587283491D05D3B7003699FD /* ContatosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5872834C1D05D3B7003699FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587283511D05D3B7003699FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +69,13 @@
 		58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GerenciadorDeAcoes.swift; path = view/GerenciadorDeAcoes.swift; sourceTree = SOURCE_ROOT; };
 		58FCEA021D21A6EF00028ACE /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapaViewController.swift; path = view/MapaViewController.swift; sourceTree = SOURCE_ROOT; };
 		58FCEA061D21C91600028ACE /* VilaMariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = VilaMariana.gpx; path = resources/VilaMariana.gpx; sourceTree = SOURCE_ROOT; };
+		75487E5029ACC539B690BDD8 /* Pods-ContatosAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosAppUITests/Pods-ContatosAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		831AA6620FC554031AF7C63C /* Pods_ContatosAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContatosAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C509697931CAA81BD5C602 /* Pods_ContatosAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContatosAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D6BFC4E677BA6BABC05B30 /* Pods-ContatosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosApp/Pods-ContatosApp.release.xcconfig"; sourceTree = "<group>"; };
+		ABBE634335950FCDAFC77ECD /* Pods-ContatosAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosAppTests/Pods-ContatosAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9139DA3EBCF532487405C10 /* Pods_ContatosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContatosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC06A76FBC970CCD9AD1EFED /* Pods-ContatosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosApp/Pods-ContatosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80284BC91C9FB886EC9C4BB4 /* Pods_ContatosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6F0333A05BDD1FEA910FB7 /* Pods_ContatosAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43381A80E85AD1270F9C8FD /* Pods_ContatosAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +113,8 @@
 				587283631D05D3B7003699FD /* ContatosAppTests */,
 				5872836E1D05D3B7003699FD /* ContatosAppUITests */,
 				5872834A1D05D3B7003699FD /* Products */,
+				F0B59E8003857099D6F9CB2E /* Pods */,
+				6ED650965A72641B0534E961 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +217,29 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		6ED650965A72641B0534E961 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9139DA3EBCF532487405C10 /* Pods_ContatosApp.framework */,
+				92C509697931CAA81BD5C602 /* Pods_ContatosAppTests.framework */,
+				831AA6620FC554031AF7C63C /* Pods_ContatosAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0B59E8003857099D6F9CB2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC06A76FBC970CCD9AD1EFED /* Pods-ContatosApp.debug.xcconfig */,
+				93D6BFC4E677BA6BABC05B30 /* Pods-ContatosApp.release.xcconfig */,
+				ABBE634335950FCDAFC77ECD /* Pods-ContatosAppTests.debug.xcconfig */,
+				088091021607CF1A266F86E3 /* Pods-ContatosAppTests.release.xcconfig */,
+				75487E5029ACC539B690BDD8 /* Pods-ContatosAppUITests.debug.xcconfig */,
+				18CD693DA211E2E5C070A903 /* Pods-ContatosAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 587283741D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosApp" */;
 			buildPhases = (
+				F73A87E7C3546C3FC4F275BE /* [CP] Check Pods Manifest.lock */,
 				587283451D05D3B7003699FD /* Sources */,
 				587283461D05D3B7003699FD /* Frameworks */,
 				587283471D05D3B7003699FD /* Resources */,
+				0AE6312D65E1802A55C2B40F /* [CP] Embed Pods Frameworks */,
+				0705BA4DE73A57521847EE3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 587283771D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppTests" */;
 			buildPhases = (
+				C6C3916EBC59DCFC76503972 /* [CP] Check Pods Manifest.lock */,
 				5872835C1D05D3B7003699FD /* Sources */,
 				5872835D1D05D3B7003699FD /* Frameworks */,
 				5872835E1D05D3B7003699FD /* Resources */,
+				51EEB4FB26239DB0061FFE16 /* [CP] Embed Pods Frameworks */,
+				39796D3C703BACDD4A4B53A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5872837A1D05D3B7003699FD /* Build configuration list for PBXNativeTarget "ContatosAppUITests" */;
 			buildPhases = (
+				867B3538DE3164410A556987 /* [CP] Check Pods Manifest.lock */,
 				587283671D05D3B7003699FD /* Sources */,
 				587283681D05D3B7003699FD /* Frameworks */,
 				587283691D05D3B7003699FD /* Resources */,
+				61FD07480E10E9ABC2C2520F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +373,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0705BA4DE73A57521847EE3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosApp/Pods-ContatosApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0AE6312D65E1802A55C2B40F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosApp/Pods-ContatosApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39796D3C703BACDD4A4B53A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosAppTests/Pods-ContatosAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51EEB4FB26239DB0061FFE16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosAppTests/Pods-ContatosAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61FD07480E10E9ABC2C2520F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContatosAppUITests/Pods-ContatosAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867B3538DE3164410A556987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6C3916EBC59DCFC76503972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F73A87E7C3546C3FC4F275BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		587283451D05D3B7003699FD /* Sources */ = {
@@ -479,6 +650,7 @@
 		};
 		587283751D05D3B7003699FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC06A76FBC970CCD9AD1EFED /* Pods-ContatosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -493,6 +665,7 @@
 		};
 		587283761D05D3B7003699FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93D6BFC4E677BA6BABC05B30 /* Pods-ContatosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,6 +679,7 @@
 		};
 		587283781D05D3B7003699FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBE634335950FCDAFC77ECD /* Pods-ContatosAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ContatosAppTests/Info.plist;
@@ -518,6 +692,7 @@
 		};
 		587283791D05D3B7003699FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088091021607CF1A266F86E3 /* Pods-ContatosAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ContatosAppTests/Info.plist;
@@ -530,6 +705,7 @@
 		};
 		5872837B1D05D3B7003699FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75487E5029ACC539B690BDD8 /* Pods-ContatosAppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ContatosAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -541,6 +717,7 @@
 		};
 		5872837C1D05D3B7003699FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CD693DA211E2E5C070A903 /* Pods-ContatosAppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ContatosAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
