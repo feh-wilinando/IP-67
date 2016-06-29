@@ -20,7 +20,7 @@ class ListagemTableViewController: UITableViewController,FormularioContatoViewCo
     var gerenciador: GerenciadorDeAcoes?
     
     
-    @IBAction func exibeMaisAcoes(gesture: UILongPressGestureRecognizer) {
+    func exibeMaisAcoes(gesture: UILongPressGestureRecognizer) {
         
         if gesture.state == UIGestureRecognizerState.Began {
          
@@ -78,6 +78,12 @@ class ListagemTableViewController: UITableViewController,FormularioContatoViewCo
         let contato = dao.findById(indexPath.row)
         
         cell.textLabel?.text = contato.nome
+        
+        
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action:#selector(self.exibeMaisAcoes(_:)) )        
+        
+        cell.addGestureRecognizer(longPress)
         
         return cell
         

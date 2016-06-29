@@ -216,9 +216,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="aLm-XD-ZDH" appends="YES" id="uru-Mx-wwP"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -236,11 +233,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Lr-GL-5pI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="aLm-XD-ZDH">
-                    <connections>
-                        <action selector="exibeMaisAcoes:" destination="fXR-Zs-9CI" id="cf1-7c-KrY"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-412" y="305"/>
         </scene>
