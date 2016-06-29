@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GerenciadorDeAcoes: NSObject, UIActionSheetDelegate {
+class GerenciadorDeAcoes: NSObject {
     
     let contato:Contato
     var controller: UIViewController?
@@ -21,11 +21,32 @@ class GerenciadorDeAcoes: NSObject, UIActionSheetDelegate {
     
     func acoesDoController(controller: UIViewController){
         self.controller = controller
+
+        let opcoes = UIAlertController(title: contato.nome, message: nil, preferredStyle: .ActionSheet)
         
-        let opcoes: UIActionSheet = UIActionSheet(title: contato.nome, delegate: self, cancelButtonTitle: "Cancelar", destructiveButtonTitle: nil, otherButtonTitles: "Ligar", "Visualizar site", "Abrir mapa")
+        let cancelar = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
+        
+        let ligar = UIAlertAction(title: "Ligar", style: .Default){(action) in
+            self.ligar()
+        }
         
         
-        opcoes.showInView(self.controller!.view)
+        let abrirSite = UIAlertAction(title: "Visualizar site", style: .Default){(action) in
+            self.abrirSite()
+        }
+        
+        let abrirMapa = UIAlertAction(title: "Abrir mapa", style: .Default){(action) in
+            self.mostrarMapa()
+        }
+        
+        
+        opcoes.addAction(cancelar)
+        opcoes.addAction(ligar)
+        opcoes.addAction(abrirSite)
+        opcoes.addAction(abrirMapa)
+        
+        
+        controller.presentViewController(opcoes, animated: true, completion: nil)
         
         
     }
@@ -43,7 +64,16 @@ class GerenciadorDeAcoes: NSObject, UIActionSheetDelegate {
         if device.model == "iPhone" {
             abrirAplicativoComURL("tel:" + contato.telefone)
         }else{
-            UIAlertView(title: "Impossível fazer ligações", message: "Seu dispositivo não é um iPhone", delegate: nil, cancelButtonTitle: "Ok").show()
+            
+            let alert = UIAlertController(title: "Impossível fazer ligações", message: "Seu dispositivo não é um iPhone", preferredStyle: .Alert)
+           
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            controller?.presentViewController(alert, animated: true, completion: nil)
+            
         }
         
     }
@@ -68,27 +98,6 @@ class GerenciadorDeAcoes: NSObject, UIActionSheetDelegate {
         
         
         abrirAplicativoComURL( url! )
-    }
-    
-    
-    //MARK: delegate - UIActionSheetDelegate
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        
-        
-        switch buttonIndex {
-        case 1:
-            ligar()
-            break
-        case 2:
-            abrirSite()
-            break
-        case 3:
-            mostrarMapa()
-            break
-        default:
-            break
-        }
-        
     }
     
 }

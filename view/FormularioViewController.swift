@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate, UIActionSheetDelegate {
+class FormularioViewController: UIViewController, UINavigationControllerDelegate ,UIImagePickerControllerDelegate {
 
     //MARK:IBOutlet
     @IBOutlet weak var nomeTextField: UITextField!
@@ -54,19 +54,43 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func selecionarFoto(sender: UIButton) {
         
         
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let sheet = UIActionSheet(title: "Escolha a foto do contato", delegate: self, cancelButtonTitle: "Cancelar", destructiveButtonTitle: nil, otherButtonTitles: "Tirar Foto", "Escolher da biblioteca")
+        
             
-            sheet.showInView(self.view)
+        
+            
+            let alertViewController = UIAlertController(title: "Escolha a foto do contato", message: nil, preferredStyle: .ActionSheet)
+            
+            let cancelButton = UIAlertAction(title: "Cancelar", style: .Cancel) { (action) in }
+            
+            let takePhotoButton = UIAlertAction(title: "Tirar Foto", style: .Default) { (action) in
+                picker.sourceType = .Camera
+                self.exibePicker(picker)
+            }
+            
+            let choosePhotoButton = UIAlertAction(title: "Escolher da biblioteca", style: .Default) { (action) in
+                picker.sourceType = .PhotoLibrary
+                self.exibePicker(picker)
+            }
+            
+            
+            alertViewController.addAction(cancelButton)
+            alertViewController.addAction(takePhotoButton)
+            alertViewController.addAction(choosePhotoButton)
+            
+            self.presentViewController(alertViewController, animated: true, completion: nil)
+        
+        
             
         }else{
-            let picker = UIImagePickerController()
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            picker.allowsEditing = true
-            picker.delegate = self
-            self.presentViewController(picker, animated: true, completion: nil)
-            
+            exibePicker(picker)
         }
+        
         
         
     }
@@ -123,6 +147,9 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
+    private func exibePicker(picker: UIImagePickerController){
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
     
     private func castToDouble(string: String) -> Double {
         return (NSNumberFormatter().numberFromString(string)?.doubleValue)!
@@ -181,24 +208,4 @@ class FormularioViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
-    
-    //MARK:UIActionSheetDelegate
-    func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        switch buttonIndex {
-        case 1:
-            picker.sourceType = .Camera
-            break
-        case 2:
-            picker.sourceType = .PhotoLibrary
-            break
-        default:
-            break
-        }
-        
-        self.presentViewController(picker, animated: true, completion: nil)
-    }
 }
