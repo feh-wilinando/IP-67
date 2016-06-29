@@ -6,6 +6,7 @@ target 'ContatosApp' do
   use_frameworks!
 
   pod 'TPKeyboardAvoiding'
+  pod 'AlamofireImage'
 
   target 'ContatosAppTests' do
     inherit! :search_paths

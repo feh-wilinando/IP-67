@@ -20,6 +20,7 @@
 		5872838C1D05DF23003699FD /* ListagemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872838B1D05DF23003699FD /* ListagemTableViewController.swift */; };
 		58C271F71D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F61D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift */; };
 		58C271FA1D1DE6660021EAFA /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */; };
+		58F86B731D2450840008E240 /* TemperaturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F86B721D2450840008E240 /* TemperaturaViewController.swift */; };
 		58FCEA031D21A6EF00028ACE /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEA021D21A6EF00028ACE /* MapaViewController.swift */; };
 		5D6F0333A05BDD1FEA910FB7 /* Pods_ContatosAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C509697931CAA81BD5C602 /* Pods_ContatosAppTests.framework */; };
 		80284BC91C9FB886EC9C4BB4 /* Pods_ContatosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9139DA3EBCF532487405C10 /* Pods_ContatosApp.framework */; };
@@ -67,6 +68,7 @@
 		5872838B1D05DF23003699FD /* ListagemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListagemTableViewController.swift; path = view/ListagemTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		58C271F61D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormularioContatoViewControllerDelegate.swift; path = delegate/FormularioContatoViewControllerDelegate.swift; sourceTree = SOURCE_ROOT; };
 		58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GerenciadorDeAcoes.swift; path = view/GerenciadorDeAcoes.swift; sourceTree = SOURCE_ROOT; };
+		58F86B721D2450840008E240 /* TemperaturaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemperaturaViewController.swift; path = view/TemperaturaViewController.swift; sourceTree = SOURCE_ROOT; };
 		58FCEA021D21A6EF00028ACE /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapaViewController.swift; path = view/MapaViewController.swift; sourceTree = SOURCE_ROOT; };
 		58FCEA061D21C91600028ACE /* VilaMariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = VilaMariana.gpx; path = resources/VilaMariana.gpx; sourceTree = SOURCE_ROOT; };
 		75487E5029ACC539B690BDD8 /* Pods-ContatosAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosAppUITests/Pods-ContatosAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				5872838B1D05DF23003699FD /* ListagemTableViewController.swift */,
 				58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */,
 				58FCEA021D21A6EF00028ACE /* MapaViewController.swift */,
+				58F86B721D2450840008E240 /* TemperaturaViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				587283831D05D5B1003699FD /* Contato.m in Sources */,
+				58F86B731D2450840008E240 /* TemperaturaViewController.swift in Sources */,
 				5872834D1D05D3B7003699FD /* AppDelegate.swift in Sources */,
 				58C271FA1D1DE6660021EAFA /* GerenciadorDeAcoes.swift in Sources */,
 				58C271F71D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift in Sources */,

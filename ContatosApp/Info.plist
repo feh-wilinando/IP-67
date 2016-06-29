@@ -32,6 +32,11 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Deseja liberar a localização atual?</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
