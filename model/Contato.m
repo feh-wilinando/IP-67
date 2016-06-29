@@ -10,6 +10,8 @@
 
 @implementation Contato
 
+@dynamic nome, telefone, endereco, site,foto,latitude,longitude;
+
 -(instancetype)initWithNome:(NSString *)nome telefone:(NSString *)telefone endereco:(NSString *)endereco site:(NSString *)site{
     
     
