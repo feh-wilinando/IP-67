@@ -8,7 +8,7 @@
 
 import CoreData
 
-class DAOUtil: NSObject {
+class CoreDataUtil: NSObject {
     // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: NSURL = {

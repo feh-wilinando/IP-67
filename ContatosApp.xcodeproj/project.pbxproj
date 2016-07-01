@@ -18,7 +18,7 @@
 		587283831D05D5B1003699FD /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 587283821D05D5B1003699FD /* Contato.m */; };
 		587283861D05D9BD003699FD /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587283851D05D9BD003699FD /* ContatoDAO.swift */; };
 		5872838C1D05DF23003699FD /* ListagemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5872838B1D05DF23003699FD /* ListagemTableViewController.swift */; };
-		58778ECE1D25CF52003D1EDF /* DAOUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58778ECD1D25CF52003D1EDF /* DAOUtil.swift */; };
+		58778ECE1D25CF52003D1EDF /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58778ECD1D25CF52003D1EDF /* CoreDataUtil.swift */; };
 		58C271F71D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F61D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift */; };
 		58C271FA1D1DE6660021EAFA /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */; };
 		58F86B731D2450840008E240 /* TemperaturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F86B721D2450840008E240 /* TemperaturaViewController.swift */; };
@@ -67,7 +67,7 @@
 		587283851D05D9BD003699FD /* ContatoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContatoDAO.swift; path = dao/ContatoDAO.swift; sourceTree = SOURCE_ROOT; };
 		587283871D05DB34003699FD /* Integration-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Integration-Bridging-Header.h"; path = "configuration/Integration-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5872838B1D05DF23003699FD /* ListagemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListagemTableViewController.swift; path = controller/ListagemTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		58778ECD1D25CF52003D1EDF /* DAOUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DAOUtil.swift; path = dao/DAOUtil.swift; sourceTree = SOURCE_ROOT; };
+		58778ECD1D25CF52003D1EDF /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataUtil.swift; path = dao/CoreDataUtil.swift; sourceTree = SOURCE_ROOT; };
 		58C271F61D1DD8C50021EAFA /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormularioContatoViewControllerDelegate.swift; path = delegate/FormularioContatoViewControllerDelegate.swift; sourceTree = SOURCE_ROOT; };
 		58C271F91D1DE6660021EAFA /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GerenciadorDeAcoes.swift; path = controller/GerenciadorDeAcoes.swift; sourceTree = SOURCE_ROOT; };
 		58F86B721D2450840008E240 /* TemperaturaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemperaturaViewController.swift; path = controller/TemperaturaViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				587283851D05D9BD003699FD /* ContatoDAO.swift */,
-				58778ECD1D25CF52003D1EDF /* DAOUtil.swift */,
+				58778ECD1D25CF52003D1EDF /* CoreDataUtil.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				58FCEA031D21A6EF00028ACE /* MapaViewController.swift in Sources */,
 				587283861D05D9BD003699FD /* ContatoDAO.swift in Sources */,
 				587283551D05D3B7003699FD /* ContatosApp.xcdatamodeld in Sources */,
-				58778ECE1D25CF52003D1EDF /* DAOUtil.swift in Sources */,
+				58778ECE1D25CF52003D1EDF /* CoreDataUtil.swift in Sources */,
 				5872837E1D05D410003699FD /* FormularioViewController.swift in Sources */,
 				5872838C1D05DF23003699FD /* ListagemTableViewController.swift in Sources */,
 			);

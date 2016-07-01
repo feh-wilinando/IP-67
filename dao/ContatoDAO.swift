@@ -10,10 +10,10 @@ import UIKit
 import CoreData
 
 
-class ContatoDAO: NSObject {
+class ContatoDAO: CoreDataUtil {
     static internal var defaultDAO: ContatoDAO!
     var contatos: Array<Contato> = Array()        
-    var daoUtil: DAOUtil!
+    
     
     override private init(){}
     
@@ -21,7 +21,6 @@ class ContatoDAO: NSObject {
         
         if ContatoDAO.defaultDAO == nil {
             ContatoDAO.defaultDAO = ContatoDAO()
-            ContatoDAO.defaultDAO.daoUtil = DAOUtil()
             ContatoDAO.defaultDAO.inserirDadosIniciais()
             ContatoDAO.defaultDAO.carregarContatos()
         }
@@ -59,7 +58,7 @@ class ContatoDAO: NSObject {
         buscaContatos.sortDescriptors = [ordem]
         
         do {
-            let result = try self.daoUtil.managedObjectContext.executeFetchRequest(buscaContatos)  as! [Contato]
+            let result = try self.managedObjectContext.executeFetchRequest(buscaContatos)  as! [Contato]
             self.contatos = result
         }catch let error as NSError{
             print("Fetch falhou: \(error.localizedDescription) ")
@@ -74,7 +73,7 @@ class ContatoDAO: NSObject {
         
         if !dadosInseridos {
             
-            let contatoCaelum: Contato = NSEntityDescription.insertNewObjectForEntityForName("Contato", inManagedObjectContext: self.daoUtil.managedObjectContext) as! Contato
+            let contatoCaelum: Contato = NSEntityDescription.insertNewObjectForEntityForName("Contato", inManagedObjectContext: self.managedObjectContext) as! Contato
             
             
             contatoCaelum.nome = "Caelum Unidade São Paulo"
@@ -84,7 +83,7 @@ class ContatoDAO: NSObject {
             contatoCaelum.latitude = -23.5883034
             contatoCaelum.longitude = -46.632369
             
-            self.daoUtil.saveContext()
+            self.saveContext()
             
             configuracoes.setBool(true, forKey: "dados_inseridos")
             configuracoes.synchronize()
@@ -97,7 +96,7 @@ class ContatoDAO: NSObject {
     
     
     func novoContato() -> Contato {
-        return NSEntityDescription.insertNewObjectForEntityForName("Contato", inManagedObjectContext: self.daoUtil.managedObjectContext) as! Contato
+        return NSEntityDescription.insertNewObjectForEntityForName("Contato", inManagedObjectContext: self.managedObjectContext) as! Contato
     }
     
     
